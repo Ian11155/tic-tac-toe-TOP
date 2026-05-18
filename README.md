@@ -4,4 +4,4 @@ Project: Tic Tac Toe
 <br>
 For TOP JavaScript Course
 <br>
-<img width="1469" height="874" alt="image" src="https://github.com/user-attachments/assets/c99ba1a5-afe7-4179-b301-0564a52a6760" />
+<img width="1470" height="956" alt="image" src="https://github.com/user-attachments/assets/84dd0d90-e404-4968-908e-b5161470c486" />
