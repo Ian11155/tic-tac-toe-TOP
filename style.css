@@ -17,6 +17,14 @@
     font-family: "Concert One", sans-serif;
 }
 
+#playerTurn {
+    display: none;
+    justify-self: center;
+    font-size: 30px;
+    font-family: "Concert One", sans-serif;
+    color: #8c8c8c;
+}
+
 #boardContainer {
     display: none;
     grid-template-rows: repeat(3, 1fr);

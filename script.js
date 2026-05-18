@@ -2,16 +2,20 @@ const boardContainer = document.getElementById("boardContainer");
 const winnerAnnounce = document.getElementById("winnerAnnounce")
 const startButton = document.getElementById("start")
 const restartButton = document.getElementById("restart")
+const playerTurn = document.getElementById("playerTurn")
 
 let player1;
 let player2;
-let turnCount = 1
+let turnCount = 0
 let movesCount = 0
 
 function gameBoard() {
     const rows = 3;
     const columns = 3;
     const board = []
+
+    playerTurn.textContent = `${player1.name}'s turn`
+    playerTurn.style.display = "flex"
 
     for (let i = 0; i < rows; i++) {
         for (let y = 0; y < columns; y++) {
@@ -27,12 +31,16 @@ function gameBoard() {
                     this.innerHTML = "X";
                     turnCount += 1
                     player2.addMove(currentCoord);
+                    playerTurn.textContent = `${player2.name}'s turn`;
+                    playerTurn.style.display = "flex"
                     gameLogic(player1, player2);
                 } else {
                     this.innerHTML = "O";
                     turnCount += 1
                     player1.addMove(currentCoord);
                     gameLogic(player1, player2);
+                    playerTurn.textContent = `${player1.name}'s turn`
+                    playerTurn.style.display = "flex"
                 }
                 box.style.pointerEvents = "none"
                 return box.id
@@ -100,14 +108,17 @@ function gameLogic(player1, player2){
         winnerAnnounce.textContent = `${player1.name} is the winner!`;
         winnerAnnounce.style.display = "flex";
         boardContainer.style.pointerEvents = "none";
+        playerTurn.textContent = "";
     } else if (player2IsWinner) {
         winnerAnnounce.textContent =`${player2.name} is the winner!`;
         winnerAnnounce.style.display = "flex";
         boardContainer.style.pointerEvents = "none";
+        playerTurn.innerHTML = "";
     } else if (movesCount === 9) {
         winnerAnnounce.textContent =`It's a tie!`;
         winnerAnnounce.style.display = "flex";
         boardContainer.style.pointerEvents = "none";
+        playerTurn.innerHTML = "";
     }
 }
 
