@@ -1,0 +1,85 @@
+.concert-one-regular {
+  font-family: "Concert One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.jaro-hello {
+  font-family: "Jaro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header {
+    display: flex;
+    justify-self: center;
+    font-size: 50px;
+    font-family: "Concert One", sans-serif;
+}
+
+#boardContainer {
+    display: none;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+}
+
+.box {
+    display: grid;
+    border: 1px solid black;
+    justify-items: center;
+    align-items: center;
+    cursor: pointer;
+}
+.box:hover {
+     border: 2px solid black;
+}
+
+.buttonGroup {
+    display: flex;
+    justify-self: center;
+    gap: 100px;
+}
+
+.buttonGroup button {
+    font-family: "Concert One", sans-serif;
+    font-size: 14px;
+    font-weight: bolder;
+    border: solid 0.5px rgb(43, 42, 42);
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    width: 180px;
+    transition: width 0.3s ease;
+    font-size: 20px;
+    padding: 10px 15px;
+    box-shadow: 3px 2px 2px 1px #000000;
+    cursor: pointer;
+}
+
+.buttonGroup.initial #restart {
+    display: none;
+}
+
+.buttonGroup.initial #start {
+    width: 180px;
+    transition: width 0.3s ease;
+    font-size: 20px;
+}
+
+.buttonGroup button:hover {
+    transform: scale(0.92);
+}
+
+
+#winnerAnnounce {
+    display: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    color: black;
+    justify-self: center;
+    margin: 30px;
+}
